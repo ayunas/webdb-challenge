@@ -25,7 +25,17 @@ projectRouter.get('/:id', (req,res) => {
         })
         .catch( err => {
             res.status(500).json(err.message);
+        });
+});
+
+projectRouter.post('/', (req,res) => {
+    dbHelper.postProject(req.body)
+        .then( proj => {
+            res.status(201).json(proj);
         })
+        .catch(err => {
+            res.status(500).json(err.message);
+        });
 });
 
 

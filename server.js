@@ -4,7 +4,6 @@ const bodyParser = express.json();
 const projectRouter = require('./projectRouter');
 const taskRouter = require('./taskRouter');
 
-
 server.use(bodyParser);
 
 server.get('/', (req,res) => {

@@ -4,11 +4,19 @@ function getProjects() {
     return db("projects");
 }
 
+// function getAProject(projectID) {
+//     return db("projects")
+//         .where({id : projectID})
+//         .first()
+// }
+
 function getAProject(projectID) {
     return db("projects")
         .where({id : projectID})
-        .first();
+        .first()
+        .join("")
 }
+
 
 function postProject(proj) {
     return db("projects")
@@ -18,9 +26,11 @@ function postProject(proj) {
             });
 };
 
+
+
 /************************************************ */
 
-function getTasks() {
+const getTasks = () => {
     return db("tasks");
 }
 

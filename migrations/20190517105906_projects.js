@@ -10,10 +10,14 @@ exports.up = function(knex, Promise) {
         
         tbl.text("description");
 
-        tbl.boolean("completed");
+        tbl.string('tasks')
+            .references("task")
+            .inTable("tasks")
+            .onDelete("RESTRICT")
+            .onUpdate("CASCADE");
 
+        tbl.boolean("completed");
   });
-    
 };
 
 exports.down = function(knex, Promise) {
