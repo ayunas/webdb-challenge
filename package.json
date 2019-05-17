@@ -1,0 +1,30 @@
+{
+  "name": "webdb-challenge",
+  "version": "1.0.0",
+  "description": "Sprint Challenge for Lambda School's SQL with Node.JS and Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "server": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayunas/webdb-challenge.git"
+  },
+  "author": "ayunas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ayunas/webdb-challenge/issues"
+  },
+  "homepage": "https://github.com/ayunas/webdb-challenge#readme",
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "express": "^4.17.0",
+    "knex": "^0.16.5",
+    "sqlite": "^3.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.0"
+  }
+}
