@@ -4,7 +4,7 @@ function getProjects() {
     return db("projects");
 }
 
-// function getAProject(projectID) {
+// function getAProject(projectID) {  //functioning getAProject
 //     return db("projects")
 //         .where({id : projectID})
 //         .first()
@@ -12,11 +12,12 @@ function getProjects() {
 
 function getAProject(projectID) {
     return db("projects")
-        .where({id : projectID})
-        .first()
-        .join("")
+            .where({'id' : projectID})
+    .then( project => {
+       //console.log(project);
+       return db("tasks").where({'project_id' : projectID}).then(task => { return {...project, task}})
+        })
 }
-
 
 function postProject(proj) {
     return db("projects")
@@ -25,8 +26,6 @@ function postProject(proj) {
                 return getAProject(id)
             });
 };
-
-
 
 /************************************************ */
 

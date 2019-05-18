@@ -10,12 +10,6 @@ exports.up = function(knex, Promise) {
         
         tbl.text("description");
 
-        tbl.string('tasks')
-            .references("task")
-            .inTable("tasks")
-            .onDelete("RESTRICT")
-            .onUpdate("CASCADE");
-
         tbl.boolean("completed");
   });
 };

@@ -7,8 +7,8 @@ module.exports = {
     connection: {
       filename: './data/lambdaprojects.sqlite3'
     },
-    useNullAsDefault : true,
-    debug : true
+    useNullAsDefault : true
+    // debug : true
   },
 
   migrations : {

@@ -17,6 +17,7 @@ projectRouter.get('/', (req,res) => {
 projectRouter.get('/:id', (req,res) => {
     dbHelper.getAProject(req.params.id)
         .then( proj => {
+            console.log('project', proj);
             if (proj) {
                 res.status(200).json(proj);
             } else {
