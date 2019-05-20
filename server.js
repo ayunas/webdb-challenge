@@ -3,8 +3,9 @@ const server = express();
 const bodyParser = express.json();
 const projectRouter = require("./projectRouter");
 const taskRouter = require("./taskRouter");
+const cors = require("cors");
 
-server.use(bodyParser);
+server.use(bodyParser, cors());
 
 server.get("/", (req, res) => {
   res.status(200).send("`<h2>Welcome to Projects</h2>");
